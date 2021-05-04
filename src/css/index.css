@@ -1,3 +1,11 @@
 .content {
   color: red;
 }
+
+
+:fullscreen {}
+
+.content {
+  user-select: none;
+  transition: all 2s ease;
+}
