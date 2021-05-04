@@ -13,16 +13,18 @@ module.exports = {
         use: [
           "style-loader", 
           "css-loader", 
-          {
-            loader: "postcss-loader",
-            options: {
-              postcssOptions: {
-                plugins: [
-                  require('autoprefixer')
-                ]
-              }
-            }
-          }
+          "postcss-loader"
+          // {
+          //   loader: "postcss-loader",
+          //   options: {
+          //     postcssOptions: {
+          //       plugins: [
+          //         // require('postcss-preset-env')
+          //         'postcss-preset-env'
+          //       ]
+          //     }
+          //   }
+          // }
         ]
       },
       {
