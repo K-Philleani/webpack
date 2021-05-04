@@ -8,6 +8,7 @@ module.exports = {
   },
   module: {
     rules: [
+      // css处理
       {
         test: /\.css$/,
         use: [
@@ -32,6 +33,7 @@ module.exports = {
           // }
         ]
       },
+      // less 处理
       {
         test: /\.less$/,
         use: [
@@ -42,6 +44,15 @@ module.exports = {
           }, 
           'postcss-loader', 
           'less-loader'
+        ]
+      },
+      // 文件资源处理(img)
+      {
+        test: /\.(png|jpe?g|gif|svg)$/,
+        use: [
+          {
+            loader: 'file-loader'
+          }
         ]
       }
     ]

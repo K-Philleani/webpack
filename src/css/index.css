@@ -1,1 +1,8 @@
 @import './test.css';
+
+
+.bg-image {
+  display: inline-block;
+  background-image: url('../img/logo_02.jpeg');
+  background-size: container;
+}
