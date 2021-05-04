@@ -1,0 +1,1 @@
+(()=>{var o={466:o=>{o.exports={dateFormat:o=>"2021-03-29",priceFormat:o=>"1314"}}},r={};function t(e){if(r[e])return r[e].exports;var s=r[e]={exports:{}};return o[e](s,s.exports,t),s.exports}(()=>{"use strict";const{dateFormat:o,priceFormat:r}=t(466);console.log(50),console.log(600),console.log(o("1314")),console.log(r("1314"))})()})();
