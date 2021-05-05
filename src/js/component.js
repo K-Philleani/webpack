@@ -18,6 +18,10 @@ function component() {
   bgDivEl.style.backgroundColor = "red"
   element.appendChild(bgDivEl)
 
+  const iEl = document.createElement('i')
+  iEl.className = "iconfont icon-ashbin"
+  element.appendChild(iEl)
+
   return element
 }
 

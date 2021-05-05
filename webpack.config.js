@@ -1,4 +1,5 @@
 const path = require('path')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
   entry: "./src/main.js",
@@ -69,7 +70,18 @@ module.exports = {
         //     }
         //   }
         // ]
+      },
+      // 字体文件
+      {
+        test: /\.(ttf|eot|woff2?)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'font/[name][hash:8][ext]'
+        }
       }
     ]
-  }
+  },
+  plugins: [
+    new CleanWebpackPlugin()
+  ]
 }

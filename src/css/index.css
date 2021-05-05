@@ -1,8 +1,15 @@
 @import './test.css';
+@import '../font/iconfont.css';
 
 
 .bg-image {
   display: inline-block;
   background-image: url('../img/logo_02.jpeg');
   background-size: container;
+}
+
+.my_icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
 }
