@@ -5,6 +5,7 @@ const CopyWebpackPlugin =  require('copy-webpack-plugin')
 const { DefinePlugin } = require('webpack')
 
 module.exports = {
+  mode: 'development',
   entry: "./src/main.js",
   output: {
     filename: "js/bundle.js",
