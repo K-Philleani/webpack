@@ -1,12 +1,13 @@
 const path = require('path')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyWebpackPlugin =  require('copy-webpack-plugin')
 const { DefinePlugin } = require('webpack')
 
 module.exports = {
   entry: "./src/main.js",
   output: {
-    filename: "bundle.js",
+    filename: "js/bundle.js",
     path: path.resolve(__dirname, 'build'),
     // assetModuleFilename: 'img/[name].[hash:8][ext]'
   },
@@ -91,6 +92,19 @@ module.exports = {
     }),
     new DefinePlugin({
       BASE_URL: "'./'"
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: 'public',
+          globOptions: {
+            ignore: [
+              "**/index.html",
+              "**/.DS_store"
+            ]
+          }
+        }
+      ]
     })
   ]
 }

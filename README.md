@@ -9,6 +9,7 @@
 ### plugins
 - clean-webpack-plugin
 - html-webpack-plugin
+- copy-webpack-plugin
 
 ### other
 - postcss-preset-env
