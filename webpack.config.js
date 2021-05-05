@@ -4,7 +4,8 @@ module.exports = {
   entry: "./src/main.js",
   output: {
     filename: "bundle.js",
-    path: path.resolve(__dirname, 'build')
+    path: path.resolve(__dirname, 'build'),
+    // assetModuleFilename: 'img/[name].[hash:8][ext]'
   },
   module: {
     rules: [
@@ -49,16 +50,25 @@ module.exports = {
       // 文件资源处理(img)
       {
         test: /\.(png|jpe?g|gif|svg)$/,
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              name: "img/[name].[hash:8].[ext]",
-              // outputPath: "img"
-              limit: 100 * 1024
-            }
+        type: 'asset',
+        generator: {
+          filename: 'img/[name].[hash:8][ext]'
+        },
+        parser: {
+          dataUrlCondition: {
+            maxSize: 100 * 1024
           }
-        ]
+        }
+        // use: [
+        //   {
+        //     loader: 'url-loader',
+        //     options: {
+        //       name: "img/[name].[hash:8].[ext]",
+        //       // outputPath: "img"
+        //       limit: 100 * 1024
+        //     }
+        //   }
+        // ]
       }
     ]
   }

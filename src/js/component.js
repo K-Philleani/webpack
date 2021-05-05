@@ -8,7 +8,7 @@ function component() {
   element.className = 'content'
 
   const imgEl = new Image()
-  imgEl.src = require('../img/logo_01.jpg').default
+  imgEl.src = require('../img/logo_01.jpg')
   element.appendChild(imgEl)
 
   const bgDivEl = document.createElement('div')
