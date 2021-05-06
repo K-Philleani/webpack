@@ -5,7 +5,7 @@ const dateFormat = (date) => {
 const priceFormat = (price) => {
 	return "1314"
 }
-
+console.log(cba);
 module.exports = {
 	dateFormat,
 	priceFormat
