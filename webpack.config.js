@@ -7,21 +7,28 @@ const { DefinePlugin } = require('webpack')
 module.exports = {
   mode: 'development',
   devtool: 'source-map',
-  entry: "./src/main.js",
+  entry: "./src/test.js",
   output: {
     filename: "js/bundle.js",
-    path: path.resolve(__dirname, 'build'),
+    path: path.resolve(__dirname, 'dist'),
     // assetModuleFilename: 'img/[name].[hash:8][ext]'
   },
   module: {
     rules: [
+      // js处理
+      {
+        test: /\.js$/,
+        use: {
+          loader: 'babel-loader'
+        }
+      },
       // css处理
       {
         test: /\.css$/,
         use: [
           "style-loader", 
          {
-           loader: "css-loader",
+            loader: "css-loader",
             options: {
               importLoaders: 1
             }

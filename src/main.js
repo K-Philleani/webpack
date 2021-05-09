@@ -7,3 +7,9 @@ console.log(mul(20, 30))
 
 console.log(dateFormat("1314"))
 console.log(priceFormat("1314"))
+
+
+let test = () => {
+  console.log("test");
+}
+test()
