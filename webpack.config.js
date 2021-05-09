@@ -7,7 +7,7 @@ const { DefinePlugin } = require('webpack')
 module.exports = {
   mode: 'development',
   devtool: 'source-map',
-  entry: "./src/test.js",
+  entry: "./src/index.ts",
   output: {
     filename: "js/bundle.js",
     path: path.resolve(__dirname, 'dist'),
@@ -17,10 +17,17 @@ module.exports = {
     rules: [
       // js处理
       {
-        test: /\.js$/,
+        test: /\.jsx?$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader'
+        }
+      },
+      // 处理ts
+      {
+        test: /\.ts$/,
+        use: {
+          loader: 'ts-loader'
         }
       },
       // css处理
