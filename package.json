@@ -4,7 +4,9 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "build": "webpack --config ./webpack.config.js"
+    "build": "npm run type-check & webpack --config ./webpack.config.js",
+    "type-check": "tsc --noEmit",
+    "type-check-watch": "tsc --noEmit --watch"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +15,7 @@
     "@babel/core": "^7.14.0",
     "@babel/preset-env": "^7.14.1",
     "@babel/preset-react": "^7.13.13",
+    "@babel/preset-typescript": "^7.13.0",
     "babel-loader": "^8.2.2",
     "clean-webpack-plugin": "^4.0.0-alpha.0",
     "copy-webpack-plugin": "^8.1.1",

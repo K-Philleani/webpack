@@ -6,3 +6,12 @@ const foo = (info: string) => {
 }
 
 foo(message)
+
+let p = new Promise((resolve, reject) => {
+  
+})
+
+let mistask = (msg: string) => {
+  console.log(msg);
+}
+// mistask(20)

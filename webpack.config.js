@@ -26,8 +26,9 @@ module.exports = {
       // 处理ts
       {
         test: /\.ts$/,
+        exclude: /node_modules/,
         use: {
-          loader: 'ts-loader'
+          loader: 'babel-loader'
         }
       },
       // css处理
