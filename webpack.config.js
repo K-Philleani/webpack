@@ -3,11 +3,12 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin =  require('copy-webpack-plugin')
 const { DefinePlugin } = require('webpack')
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 module.exports = {
   mode: 'development',
   devtool: 'source-map',
-  entry: "./src/main.js",
+  entry: "./src/index.js",
   output: {
     filename: "js/bundle.js",
     path: path.resolve(__dirname, 'dist'),
@@ -15,6 +16,11 @@ module.exports = {
   },
   module: {
     rules: [
+      // Vue处理
+      {
+        test: /\.vue$/,
+        use: ['vue-loader']
+      },
       // js处理
       {
         test: /\.jsx?$/,
@@ -121,6 +127,7 @@ module.exports = {
           }
         }
       ]
-    })
+    }),
+    new VueLoaderPlugin()
   ]
 }

@@ -31,6 +31,8 @@
     "postcss-preset-env": "^6.7.0",
     "style-loader": "^2.0.0",
     "ts-loader": "^9.1.2",
+    "vue-loader": "^15.9.7",
+    "vue-template-compiler": "^2.6.12",
     "webpack": "^5.14.0",
     "webpack-cli": "^4.3.1"
   },
@@ -38,6 +40,7 @@
     "core-js": "^3.12.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "regenerator-runtime": "^0.13.7"
+    "regenerator-runtime": "^0.13.7",
+    "vue": "^2.6.12"
   }
 }
