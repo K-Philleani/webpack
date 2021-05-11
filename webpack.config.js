@@ -7,7 +7,7 @@ const { DefinePlugin } = require('webpack')
 module.exports = {
   mode: 'development',
   devtool: 'source-map',
-  entry: "./src/index.ts",
+  entry: "./src/main.js",
   output: {
     filename: "js/bundle.js",
     path: path.resolve(__dirname, 'dist'),
@@ -19,9 +19,7 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader'
-        }
+        use: ['babel-loader', 'eslint-loader']
       },
       // 处理ts
       {

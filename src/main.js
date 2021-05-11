@@ -13,3 +13,5 @@ let test = () => {
   console.log("test");
 }
 test()
+
+let a = 20
