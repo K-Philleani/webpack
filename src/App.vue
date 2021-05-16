@@ -5,7 +5,15 @@
 export default {
   data() {
     return {
-      message: "Hello, VUe"
+      message: "Helldddddddo, Vue"
+    }
+  },
+  mounted() {
+    this.log()
+  },
+  methods: {
+    log() {
+      console.log('1111000');
     }
   }
 }

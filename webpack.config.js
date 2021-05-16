@@ -7,6 +7,7 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 module.exports = {
   mode: 'development',
+  target: "web",
   devtool: 'source-map',
   entry: "./src/index.js",
   output: {
@@ -14,6 +15,9 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     // assetModuleFilename: 'img/[name].[hash:8][ext]'
   },
+  devServer: {
+    hot: true
+  },  
   module: {
     rules: [
       // Vue处理
